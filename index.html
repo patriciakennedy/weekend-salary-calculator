@@ -2,19 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <link rel="stylesheet" href="style.css">
   <title>Salary Calculator</title>
+  
 </head>
 <body>
+  
   <header>
     <h1>Salary Calculator</h1>
   </header>
   <main>
     <h2>Add Employee</h2>
-    <h2>Employees</h2>
-  </main>
-  <footer>
-    <p>Total Monthly</p>
-  </footer>
+<!-- form Employees -->
+
+<form>
+  <label for="first-name"></label>
+  <input id="first-name" data-testid="firstNameInput" type="text" placeholder="First Name" autocomplete="off" required>
+
+  <label for="last-name"></label>
+  <input id="last-name" data-testid="lastNameInput" type="text" placeholder="Last Name" autocomplete="off" required>
+
+  <label for="id-number"></label>
+  <input id="id-number" data-testid="idInput" type="number" placeholder="ID Number" maxlength="10" autocomplete="off" required>
+
+  <label for="job-title"></label>
+  <input id="job-title" data-testid="titleInput" type="text" placeholder="Title" autocomplete="off" required>
+
+  <label for="annual-salary"></label>
+  <input id="annual-salary" data-testid="annualSalaryInput" type="number" placeholder="Annual Salary" autocomplete="off" required>
+
+<button data-testid="submitButton" id="submitButton">Submit</button>
+</form>
+
+ <!-- Table for employees -->
+ <h2>Employees</h2>
+ <div class="filter">
+   <table>
+     <thead>
+       <tr>
+         <th>First Name</th>
+         <th>Last Name</th>
+         <th>ID Number</th>
+         <th>Job Title</th>
+         <th>Annual Salary</th>
+         <th>Actions</th>
+       </tr>
+     </thead>
+     <tbody>
+       <!-- Employee rows will be added here via JavaScript -->
+     </tbody>
+   </table>
+ </div>
+
+ <!-- Total Monthly Calculation -->
+  <!-- <footer> 
+ <div id="total-monthly-container">
+   <p id="total-monthly">Total Monthly: $0.00</p>
+ </div>
+ </footer> -->
+
+
+ <!-- WORKING FOOTER NOW BELOW ------------------ -->
+ <!-- <footer>
+    <p>Total Monthly: $0.00</p>
+</footer> -->
+
+<!------------------------------------------ NEW FOOTER ADDED ------------------------------------>
+<footer id="footer">
+  <p>Total Monthly Cost:$<span id="totalMonthly">0</span></p>
+</footer>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
