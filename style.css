@@ -141,16 +141,7 @@ footer {
     font-size: 1.2rem; 
     color: #333; 
   }
-  /* THIS FIRST CODE WAS USED */
-  /* #total-monthly-container.over-budget {
-    color: red;
-  } */
-/* THIS WAS COMMENTED */
-  /* .over-budget {
-    color: red;
-    font-weight: bold;
-  }  */
-  
+   
  /* -------------------------------NEW CODE ADDED----------------------- */
    footer.over-budget {
     color:red;

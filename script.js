@@ -33,12 +33,7 @@ function newEmployee(event) {
 
   // Add to total monthly cost
   totalMonthlyCost += monthlySalary;
-//////////////////////////////////////////////////////////////////////////// ALMOST THE SAME FOR THE ABOVE NOTHING CHANGE
 
-
-
-
-///////////////////////////////////////////////////////////////////////////// CODE ADDED ABOVE - TRY IT AND SEE//////
   // Create a new table row
   const row = document.createElement('tr');
   row.innerHTML = `
@@ -67,33 +62,29 @@ function newEmployee(event) {
   // Add delete functionality to the new button
   const deleteButton = row.querySelector('.delete-button');
   deleteButton.addEventListener('click', function (event) {
-    const rowToDelete = event.target.closest('tr'); // Get the parent row (closest <tr>)
-    totalMonthlyCost -= monthlySalary; // Adjust total monthly cost
-    rowToDelete.remove(); // Remove the row from the table
-    updateFooter(); // Update the footer to reflect changes
+    const rowToDelete = event.target.closest('tr'); 
+    totalMonthlyCost -= monthlySalary; 
+    rowToDelete.remove(); 
+    updateFooter(); 
   });
 }
 
-////////////////////////////////////////////////////////////////////////////////////////// ORIGINAL FUNCTION START
+//update footer section - total monthly
 function updateFooter() {
   const footer = document.querySelector('footer'); 
   const totalMonthlyParagraph = footer.querySelector('p');
   totalMonthlyParagraph.textContent = `Total Monthly: $${totalMonthlyCost.toFixed(2)}`;
 
-  // Add or remove the 'over-budget' class
-
-
+  // this will add or remove the 'over-budget' class
   if (totalMonthlyCost > 20000) {
     footer.classList.add('over-budget'); 
   } else {
     footer.classList.remove('over-budget'); 
   }
 };
-///////////////////////////////////////////////////////////////////////////////////////// ORGINAL FUNCTION ENDS
 
-function updatedMonthlyCost() {
 
-}
+
 
 
 
